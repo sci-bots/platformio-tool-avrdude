@@ -1,0 +1,16 @@
+package:
+  name: platformio-tool-avrdude
+  version: 1.60300.0
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 0
+  script: pio platform install atmelavr --skip-default-package --with-package=tool-avrdude
+
+requirements:
+  build:
+    - platformio-platform-atmelavr
+
+  run:
+    - platformio-platform-atmelavr
